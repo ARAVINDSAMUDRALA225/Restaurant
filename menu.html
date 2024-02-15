@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Restaurant Menu</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+
+    header h1 {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      font-weight: 400;
+      font-size: 32px;
+      letter-spacing: 10px;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+    }
+    header h3{
+      text-align: center;
+      font-size: 30px;
+      color: rebeccapurple;
+    }
+
+    section {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 2em;
+    }
+
+    .menuItem {
+      display: grid;
+      position: relative;
+      grid-template-rows: auto 1fr;
+      border-radius: 15px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.6);
+      transition: .2s ease-in-out;
+      padding: 10px;
+      margin: 10px;
+      
+    }
+    .menuItem img{
+      position: relative;
+      width: 90%;
+      height: 100px;
+      border-radius: 20px 15px 0 0;
+      cursor: pointer;
+      padding: 10px;
+
+    }
+
+    .menuItem:hover {
+      background-color: #f4f4f4;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Restaurant Food</h1>
+    <h3>&mdash;Menu&mdash;</h3>
+  </header>
+
+  <section id="menu">
+    <div class="menuItem" onclick="showPrice('Biryani', 120.00)">
+        <img src="./biryani.jpg">
+      <h2>Chicken biryani</h2>
+      <p>₹120.00</p>
+      <a href="" Buy now><button>Buy now</button></a>
+    </div>
+
+    <div class="menuItem" onclick="showPrice('paneer biryani', 200.00)">
+      <img src="./paneerbiryani.jpg">
+      <h2>paneer biryani</h2>
+      <p>₹200.00</p>
+      <a href="" Buy now><button>Buy now</button></a>
+    </div>
+
+    <div class="menuItem" onclick="showPrice('butter naan', 8.99)">
+      <img src="./butternaan.jpg">
+      <h2>butteer naan</h2>
+      <p>₹8.99</p>
+      <a href="" Buy now><button>Buy now</button></a>
+    </div>
+
+    <div class="menuItem" onclick="showPrice('palak paneer', 100.00)">
+      <img src="./palakpaneer.jpg">
+      <h2>palak paneer</h2>
+      <p>₹100.00</p>
+      <a href="" Buy now><button>Buy now</button></a>
+    </div>
+
+    <div class="menuItem" onclick="showPrice('Veg spring roll', 160.00)">
+      <img src="./vegspringroll.jpg">
+      <h2>Veg spring roll</h2>
+      <p>₹160.00</p>
+      <a href="" Buy now><button>Buy now</button></a>
+    </div>
+
+    <div class="menuItem" onclick="showPrice('chicken 65', 80.00)">
+      <img src="./chicken65.jpg">
+      <h2>Chicken 65</h2>
+      <p>₹80.00</p>
+      <a href="" Buy now><button>Buy now</button></a>
+    </div>
+
+    <div class="menuItem" onclick="showPrice('chilli prawns', 200.00)">
+      <img src="./ChilliPrawns.webp">
+      <h2>ChilliPrawns</h2>
+      <p>₹200.00</p>
+      <a href="" Buy now><button>Buy now</button></a>
+    </div>
+    <!-- Add more items as needed -->
+
+  </section>
+
+  <script>
+    function showPrice(itemName, itemPrice) {
+      alert(`Price of ${itemName}: $${itemPrice.toFixed(2)}`);
+    }
+  </script>
+
+</body>
+</html>
